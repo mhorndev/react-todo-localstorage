@@ -70,16 +70,17 @@ function App() {
           })
         }
         <div className="todo-item new-item">
-          <div id="text-box" onInput={onTextInput}
+          <div 
+            id="text-box" onInput={onTextInput}
             spellCheck="false" 
             contentEditable="true" 
             placeholder="New todo"
             className="new-item-text single-line" 
           />
-          <i onClick={() => onNewTodo()}
-             className={"material-icons btnAdd " 
-             +(text !== "" ? "enabled": "disabled")} 
-          >
+          <i 
+            onClick={() => onNewTodo()}
+            className={"material-icons btnAdd " 
+            +(text !== "" ? "enabled": "disabled")}>
             {icons.add}
           </i>
         </div>
@@ -88,7 +89,15 @@ function App() {
       <button className="btnClear" onClick={clearTodos}>Clear todos</button>
 
       <footer>
-        <p><code>Made with <i class="icon ion-heart secondary"></i> in React</code></p>
+        <p>
+          <code>Made with <i class="icon ion-heart secondary"></i> in React</code>
+        </p>
+        <a 
+          data-size="large"
+          className="github-button" 
+          href="https://github.com/mhorndev/react-todo-localstorage" 
+          aria-label="View on GitHub">View on GitHub
+        </a>
       </footer>
     </div>
   );
