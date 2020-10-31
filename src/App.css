@@ -111,11 +111,6 @@ footer {
   text-align: center;
 }
 
-.github-button {
-  padding: 15px;
-  background-color: #e83e8c;
-}
-
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;
