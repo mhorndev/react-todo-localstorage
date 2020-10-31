@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+html, body {
+    background-color: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+.primary {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.secondary {
+  color: #e83e8c;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    padding: 15px;
+    color: #61dafb;
+    font-size: calc(16px + 2vmin);
+}
+
+.container {
+    width: 66%;
+    background-color: #FFFFFF;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    border: 1px whitesmoke solid;
+}
+
+.todo-text {
+  flex: 1;
+}
+
+.new-item {
+  background-color: whitesmoke;
+  border: 1px lightgray solid;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+.btnAdd {
+  color: green;
+  cursor: pointer;
+}
+
+.btnAdd.disabled {
+  color: lightgray;
+  cursor: default;
+}
+
+.new-item-text {
+  flex: 1;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+  outline: none;
+  overflow: scroll;
+}
+
+[contenteditable][placeholder]:empty:before {
+  content: attr(placeholder);
+  position: absolute;
+  color: gray;
+  background-color: transparent;
+  cursor: text;
+}
+
+[contenteditable].single-line {
+  white-space: nowrap;
+  width:200px;
+  overflow: hidden;
+} 
+
+[contenteditable].single-line br {
+  display:none;
+}
+
+[contenteditable].single-line * {
+  display:inline;
+  white-space:nowrap;
+}
+
+.btnClear {
+  background-color: #61dafb;
+  display: inline-block;
+  border: none;
+  padding: 10px 25px;
+  outline: none;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.btnClear:hover {
+  background-color: #fff;
+}
+
+footer {
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
   }
 }
