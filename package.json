@@ -2,7 +2,7 @@
   "name": "react-todo-localstorage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mhorndev.github.io/react-todo-localstorage/",
+  "homepage": "https://mhorndev.github.io/react-todo-localstorage",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
